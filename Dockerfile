@@ -4,6 +4,10 @@ FROM ubuntu:14.04
 RUN apt-get -y update && apt-get install -y librsvg2-bin && apt-get install -y curl
 
 ENV GOLANG_VERSION 1.6
+ENV GOOS linux
+ENV GOARCH arm
+ENV GOARM 5
+
 ENV GOLANG_DOWNLOAD_URL https://golang.org/dl/go$GOLANG_VERSION.linux-amd64.tar.gz
 ENV GOLANG_DOWNLOAD_SHA256 5470eac05d273c74ff8bac7bef5bad0b5abbd1c4052efbdbc8db45332e836b0b
 
