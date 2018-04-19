@@ -1,5 +1,5 @@
-FROM ubuntu:14.04
-
+#FROM ubuntu:14.04
+FROM arm32v7/debian:latest
 # required for rsvg-convert dependency
 RUN apt-get -y update && apt-get install -y librsvg2-bin && apt-get install -y curl
 
